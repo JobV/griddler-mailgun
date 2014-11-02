@@ -16,8 +16,8 @@ module Griddler
           cc: cc_recipients,
           from: determine_sender,
           subject: params[:subject],
-          text: params['body-plain'],
-          html: params['body-html'],
+          text: params['stripped-text'],
+          html: params['stripped-html'],
           attachments: attachment_files,
           headers: serialized_headers
         }
